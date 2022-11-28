@@ -23,6 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 Main.js
-Home.js
 Login.js
 Footer.js
