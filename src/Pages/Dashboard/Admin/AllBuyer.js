@@ -15,13 +15,13 @@ const AllBuyer = () => {
     const { data: allbuyer = [], refetch, isLoading } = useQuery({
         queryKey: ['allbuyer'],
         queryFn: async () => {
-            const res = await fetch('https://bikeserver.vercel.app/users/allbuyer');
+            const res = await fetch('https://recyclefurniture.vercel.app/users/allbuyer');
             const data = await res.json();
             return data;
         }
     });
     const handleDeleteBuyer = buyer => {
-        fetch(`https://bikeserver.vercel.app/users/${buyer._id}`, {
+        fetch(`https://recyclefurniture.vercel.app/users/${buyer._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

@@ -21,7 +21,7 @@ const MyOrders = () => {
     }
     const handleDeleteOrder = order => {
         console.log(order._id)
-        fetch(`https://bikeserver.vercel.app/orders/${order._id}`, {
+        fetch(`https://recyclefurniture.vercel.app/orders/${order._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -39,7 +39,7 @@ const MyOrders = () => {
         queryKey: ['myorders'],
         queryFn: async () => {
             try {
-                const res = await fetch(`https://bikeserver.vercel.app/orders/${user?.email}`, {
+                const res = await fetch(`https://recyclefurniture.vercel.app/orders/${user?.email}`, {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }

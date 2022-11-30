@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
-import logo from '../../../Assets/logo.png'
+import logo from '../../../Assets/logo.jpg'
 
 const Navber = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -35,7 +35,7 @@ const Navber = () => {
                     </ul>
                 </div>
                 <div><img className=' avatar rounded-sm w-12' src={logo} alt="" />
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">BiCycle Keeper</Link>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl">Recycle-Furniture</Link>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

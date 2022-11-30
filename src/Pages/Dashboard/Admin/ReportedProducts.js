@@ -18,7 +18,7 @@ const ReportedProducts = () => {
     const { data: reports = [], refetch, isLoading } = useQuery({
         queryKey: ['report'],
         queryFn: async () => {
-            const res = await fetch('https://bikeserver.vercel.app/reports');
+            const res = await fetch('https://recyclefurniture.vercel.app/reports');
             const data = await res.json();
             return data;
         }
@@ -26,7 +26,7 @@ const ReportedProducts = () => {
 
     const handleDeleteProduct = products => {
         console.log(products)
-        fetch(`https://bikeserver.vercel.app/products/${products.productId}`, {
+        fetch(`https://recyclefurniture.vercel.app/products/${products.productId}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -39,7 +39,7 @@ const ReportedProducts = () => {
                 }
             })
 
-        fetch(`https://bikeserver.vercel.app/reported-products/${products._id}`, {
+        fetch(`https://recyclefurniture.vercel.app/reported-products/${products._id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

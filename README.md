@@ -1,16 +1,16 @@
-BiCycle Keeper
-- Live link: https://bicyclekeeper-8b86d.web.app/
+Recycle Furniture
+- Live link: https://recycle-furniture-f069c.web.app/
 - Used CURD( Create, Read, Update, and Delete) Operations from MOngoDB.
 - Used MOngoDb Databse.
 - Used firebase for hosting the site.
 - Used Vercel for hosting the server.
-- Used custom Hook.
-- Used Custom Error Page
-- Used Private Route to secure data from non user.
-- Used React DOM
-- Used tailwind framework
 - Used different types of tailwind framework like: daisyui, mambaui
 - Used JWT token for authorization.
 - Used Payment method with Stripe.
 - Used useQuery from react.
 - Used Axios.
+- Used custom Hook.
+- Used Custom Error Page
+- Used Private Route to secure data from non user.
+- Used React DOM
+- Used tailwind framework

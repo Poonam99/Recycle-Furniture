@@ -1,24 +1,25 @@
-import Blog from "../../Blog/Blog";
-import AllBuyer from "../../Dashboard/Admin/AllBuyer";
-import AllSeller from "../../Dashboard/Admin/AllSeller";
-import ReportedProducts from "../../Dashboard/Admin/ReportedProducts";
-import MyOrders from "../../Dashboard/Buyer/MyOrders";
-import AddProduct from "../../Dashboard/Seller/AddProduct/AddProduct";
-import MyProducts from "../../Dashboard/Seller/MyProducts/MyProducts";
-import ErrorPage from "../../ErrorPage/ErrorPage";
-import Home from "../../Home/Home/Home";
-import DashboardLayout from "../../Layout/DashboardLayout";
-import Payment from "../../Payment/Payment/Payment";
-import Products from "../../Products/Products";
-import Login from "../../User/Login/Login";
-import Signup from "../../User/Signup/Signup";
-import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import AdminRoute from "../usersRoute/AdminRoute/AdminRoute";
-import BuyerRoute from "../usersRoute/BuyerRoute/BuyerRoute";
-import SellerRoute from "../usersRoute/SellerRoute/SellerRoute";
+import DashboardLayout from "../Layout/DashboardLayout";
+import Main from "../Layout/Main";
+import Blog from "../Pages/Blog/Blog";
+import AllBuyer from "../Pages/Dashboard/Admin/AllBuyer";
+import AllSeller from "../Pages/Dashboard/Admin/AllSeller";
+import ReportedProducts from "../Pages/Dashboard/Admin/ReportedProducts";
+import MyOrders from "../Pages/Dashboard/Buyer/MyOrders";
+import AddProducts from "../Pages/Dashboard/Seller/AddProducts/AddProducts";
+import MyProducts from "../Pages/Dashboard/Seller/MyProducts/MyProducts";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Home from "../Pages/Home/Home/Home";
+import Login from "../Pages/Login/Login";
+import Payment from "../Pages/Payment/Payment/Payment";
+import Products from "../Pages/Products/Products";
+import Signup from "../Pages/Signup/Signup";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import AdminRoute from "./usersRoute/AdminRoute/AdminRoute";
+import BuyerRoute from "./usersRoute/BuyerRoute/BuyerRoute";
+import SellerRoute from "./usersRoute/SellerRoute/SellerRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
-const { default: Main } = require("../../Layout/Main");
+
 
 export const router = createBrowserRouter([
     {
@@ -55,7 +56,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/dashboard/addproduct',
-                element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
+                element: <SellerRoute><AddProducts></AddProducts></SellerRoute>
             },
             {
                 path: '/dashboard/allseller',

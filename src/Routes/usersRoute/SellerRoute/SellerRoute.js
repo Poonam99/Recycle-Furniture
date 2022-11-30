@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { AuthContext } from '../../../Contexts/AuthProvider';
-import useSeller from '../../../Hooks/users/useSeller/useSeller';
-import Loading from '../../../Loading/Loading';
+import { AuthContext } from '../../../Pages/Contexts/AuthProvider';
+import useSeller from '../../../Pages/Hooks/User/UseSeller/useSeller';
+import Loading from '../../../Pages/Loading/Loading';
+
 
 const SellerRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);

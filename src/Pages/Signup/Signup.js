@@ -2,8 +2,9 @@ import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Contexts/AuthProvider';
-import useToken from '../../Hooks/useToken';
+import { AuthContext } from '../Contexts/AuthProvider';
+import useToken from '../Hooks/useToken';
+
 
 const Signup = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -61,7 +62,7 @@ const Signup = () => {
 
     const saveUser = (name, email, role) => {
         const user = { name, email, role };
-        fetch('https://bikeserver.vercel.app/users', {
+        fetch('https://recyclefurniture.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

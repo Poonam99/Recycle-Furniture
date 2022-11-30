@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className=" bg-gray-100 text-black">
             <div className="container flex items-center gap-8 p-4 md:p-8 lg:flex-col divide-gray-400">
                 <div className='flex items-center'>
-                    <span className="dark:text-gray-800">© Copyright 2022. BiCycle Keepr. All Rights Reserved.</span>
+                    <span className="dark:text-gray-800">© Copyright 2022. Recycle Furniture. All Rights Reserved.</span>
                 </div>
                 <div className="flex justify-end items-center pt-6 lg:pt-0">
                     <div className="flex space-x-4">

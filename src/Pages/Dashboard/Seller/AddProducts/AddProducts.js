@@ -48,7 +48,7 @@ const AddProducts = () => {
                         description: data.description
                     }
 
-                    fetch(`https://bikeserver.vercel.app/products`, {
+                    fetch(`https://recyclefurniture.vercel.app/products`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -69,7 +69,7 @@ const AddProducts = () => {
     const { data: catagories, isLoading } = useQuery({
         queryKey: ['catagory'],
         queryFn: async () => {
-            const res = await fetch('https://bikeserver.vercel.app/catagories');
+            const res = await fetch('https://recyclefurniture.vercel.app/catagories');
             const data = await res.json();
             return data;
         }

@@ -19,7 +19,7 @@ const CheckoutForm = ({ booking }) => {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("https://bikeserver.vercel.app/create-payment-intent", {
+        fetch("https://recyclefurniture.vercel.app/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const CheckoutForm = ({ booking }) => {
                 email,
                 bookingId: _id
             }
-            fetch('https://bikeserver.vercel.app/payments', {
+            fetch('https://recyclefurniture.vercel.app/payments', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -99,7 +99,7 @@ const CheckoutForm = ({ booking }) => {
                 .then(data => {
                     console.log(data);
                     if (data.insertedId) {
-                        fetch(`https://bikeserver.vercel.app/stockout/${bookingId}`, {
+                        fetch(`https://recyclefurniture.vercel.app/stockout/${bookingId}`, {
                             method: 'PATCH',
                             headers: {
                                 'content-type': 'application/json',

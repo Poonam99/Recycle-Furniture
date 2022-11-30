@@ -8,11 +8,13 @@ const ProductCatagory = ({ catagory }) => {
 
     return (
         <div className="max-w-sm rounded-md shadow-md text-black">
-            <PhotoProvider>
-                <PhotoView src={image} >
-                    <img src={image} alt="" className="object-cover object-center w-full rounded-t-md dark:bg-gray-500" />
-                </PhotoView>
-            </PhotoProvider>
+            <div className='h-[400px] flex items-center'>
+                <PhotoProvider>
+                    <PhotoView src={image} >
+                        <img src={image} alt="" className="object-cover object-center w-full rounded-t-md dark:bg-gray-500" />
+                    </PhotoView>
+                </PhotoProvider>
+            </div>
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-lg font-semibold tracking-wide">{catagoryName}</h2>

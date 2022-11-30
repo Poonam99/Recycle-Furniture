@@ -21,13 +21,13 @@ const AllSeller = () => {
     const { data: allseller = [], refetch, isLoading } = useQuery({
         queryKey: ['allseller'],
         queryFn: async () => {
-            const res = await fetch('https://bikeserver.vercel.app/users/allseller');
+            const res = await fetch('https://recyclefurniture.vercel.app/users/allseller');
             const data = await res.json();
             return data;
         }
     });
     const handleDeleteSeller = seller => {
-        fetch(`https://bikeserver.vercel.app/users/${seller._id}`, {
+        fetch(`https://recyclefurniture.vercel.app/users/${seller._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -42,7 +42,7 @@ const AllSeller = () => {
             })
     }
     const handleVerifySeller = seller => {
-        fetch(`https://bikeserver.vercel.app/users/seller/${seller._id}`, {
+        fetch(`https://recyclefurniture.vercel.app/users/seller/${seller._id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

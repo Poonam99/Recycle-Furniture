@@ -26,7 +26,7 @@ const MyProducts = () => {
         queryKey: ['products'],
         queryFn: async () => {
             try {
-                const res = await fetch(`https://bikeserver.vercel.app/products/${user?.email}`, {
+                const res = await fetch(`https://recyclefurniture.vercel.app/products/${user?.email}`, {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -50,7 +50,7 @@ const MyProducts = () => {
             catagory: product.catagory
         }
 
-        fetch(`https://bikeserver.vercel.app/advertisements`, {
+        fetch(`https://recyclefurniture.vercel.app/advertisements`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -67,7 +67,7 @@ const MyProducts = () => {
     }
 
     const handleDeleteProduct = product => {
-        fetch(`https://bikeserver.vercel.app/products/${product._id}`, {
+        fetch(`https://recyclefurniture.vercel.app/products/${product._id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',

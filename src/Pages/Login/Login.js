@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../Contexts/AuthProvider';
-import useToken from '../../Hooks/useToken';
+import { AuthContext } from '../Contexts/AuthProvider';
+import useToken from '../Hooks/useToken';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();

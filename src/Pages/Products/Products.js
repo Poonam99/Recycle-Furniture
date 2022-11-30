@@ -26,7 +26,7 @@ const Products = () => {
             phone,
             location
         }
-        fetch(`https://bikeserver.vercel.app/orders`, {
+        fetch(`https://recyclefurniture.vercel.app/orders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -52,12 +52,12 @@ const Products = () => {
         setReportProduct(null);
     }
     useEffect(() => {
-        fetch(`https://bikeserver.vercel.app/catagory/${catagory}`)
+        fetch(`https://recyclefurniture.vercel.app/catagory/${catagory}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.data)
                 if (data.data) {
-                    fetch(`https://bikeserver.vercel.app/veryfied/seller/${productEmail}`)
+                    fetch(`https://recyclefurniture.vercel.app/veryfied/seller/${productEmail}`)
                         .then(res => res.json())
                         .then(data => {
                             console.log(data)
@@ -77,7 +77,7 @@ const Products = () => {
             productSellerMail: product.sellerEmail
         }
 
-        fetch(`https://bikeserver.vercel.app/report-items`, {
+        fetch(`https://recyclefurniture.vercel.app/report-items`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { AuthContext } from '../Contexts/AuthProvider';
-import useAdmin from '../Hooks/users/useAdmin/useAdmin';
-import useBuyer from '../Hooks/users/useBuyer/useBuyer';
-import useSeller from '../Hooks/users/useSeller/useSeller';
-import Header from '../Shared/Header/Header';
+import { AuthContext } from '../Pages/Contexts/AuthProvider';
+import useAdmin from '../Pages/Hooks/User/UseAdmin/useAdmin';
+import useBuyer from '../Pages/Hooks/User/UseBuyer/useBuyer';
+import useSeller from '../Pages/Hooks/User/UseSeller/useSeller';
+import Navber from '../Pages/Shared/Navber/Navber';
+
 
 const DashboardLayout = () => {
     const { user } = useContext(AuthContext);
@@ -13,7 +14,7 @@ const DashboardLayout = () => {
     const [isSeller] = useSeller(user?.email);
     return (
         <div>
-            <Header></Header>
+            <Navber></Navber>
             <div className="drawer drawer-mobile">
                 <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
