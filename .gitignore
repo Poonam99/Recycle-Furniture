@@ -23,7 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 
-AuthProvider.js
+
 AllBuyer.js
 AllSeller.js
 ReportedProducts.js
